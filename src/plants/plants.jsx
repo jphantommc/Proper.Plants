@@ -1,20 +1,8 @@
-import Plant from "./plants";
-import { useState } from "../cart";
+import Plant from "./plant";
+import "./plant.css";
 
-
-export default function plant({ plant, addToCart}) {
-    return (
-        <li className="plant">
-            <figure>{plant.image}</figure>
-            <h3>{plant.name}</h3>
-            <button onClick={() => addToCart(plant)}>Add to Cart</button>
-        </li>
-    );
-}
-
-
-export default function Plants ({ plants, addToCart }) {
-    return (
+export default function Plants({ plants, addToCart }) {
+        return (
         <section className="plants">
             <h2>Plants</h2>
             <ul>
@@ -24,5 +12,5 @@ export default function Plants ({ plants, addToCart }) {
             </ul>
         </section>
     );
-}  
 
+}

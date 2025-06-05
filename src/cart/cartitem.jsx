@@ -1,12 +1,12 @@
-import cartitemquantity from "./cartitemquantity";
+import CartItemQuantity from "./cartitemquantity";
 
-export default function cartitem({ item, removeFromCart, addToCart}) {
+export default function CartItem({ item, removeFromCart, addToCart}) {
     return (
-        <li classname="cart-item">
+        <li className="cart-item">
             <div>
                 {item.image} {item.name}
             </div>
-            <cartitemquantity item={itme} removeFromCart={removeFromCart} addToCart={addToCart} />
+            <CartItemQuantity item={item} removeFromCart={removeFromCart} addToCart={addToCart} />
         </li>
     )
 }

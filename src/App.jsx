@@ -20,7 +20,7 @@ export default function App() {
 
   const removeFromCart = (itemToRemove) => { 
     setCart(
-      cart.map((item) => item.id === itemToRemove.id ? ( ...item, quantity: item.quantity - 1) : item,
+      cart.map((item) => item.id === itemToRemove.id ? { ...item, quantity: item.quantity - 1} : item,
     )
     .filter((item) => item.quantity > 0)
   );
@@ -35,3 +35,4 @@ return (
   </main>
   </>
 );
+}
